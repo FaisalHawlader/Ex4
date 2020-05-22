@@ -1,4 +1,26 @@
+package org.exercise
 
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+
+import com.esri.core.geometry.{ GeometryEngine, SpatialReference, Geometry, Point }
+import com.github.nscala_time.time.Imports.{ DateTime, Duration }
+
+import java.text.SimpleDateFormat
+
+import org.apache.spark.{ HashPartitioner, Partitioner }
+import org.apache.spark.rdd.RDD
+import org.apache.spark.{ SparkConf, SparkContext }
+import org.apache.spark.util.StatCounter
+
+import scala.collection.mutable.ArrayBuffer
+import scala.reflect.ClassTag
+
+import spray.json._
+import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.functions.{ col, round, min, max }
 
 object Exercise4RunTaxiTrips {
   Logger.getLogger("org").setLevel(Level.ERROR)
