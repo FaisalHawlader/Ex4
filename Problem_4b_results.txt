@@ -1,0 +1,124 @@
+ Problem 2 (a)
+Intital no of rows in Rdd 1676893
+No of rows in Rdd  after removing Null Co-ordinates/Null ON STREET NAME or CROSS STREET NAME : 976350
+Some random rows from dataset after parsing :
+
++----------+----------+---------+---------+----------+--------------------+--------------------+-----------------+---------------+-------------------------+------------------------+-----------------------------+-----------------------------+--------------------+--------------------+
+|CRASH DATE|CRASH TIME|  BOROUGH| LATITUDE| LONGITUDE|            LOCATION|      ON STREET NAME|CROSS STREET NAME|OFF STREET NAME|NUMBER OF PERSONS INJURED|NUMBER OF PERSONS KILLED|CONTRIBUTING FACTOR VEHICLE 1|CONTRIBUTING FACTOR VEHICLE 2| VEHICLE TYPE CODE 1| VEHICLE TYPE CODE 2|
++----------+----------+---------+---------+----------+--------------------+--------------------+-----------------+---------------+-------------------------+------------------------+-----------------------------+-----------------------------+--------------------+--------------------+
+|07/27/2019|     22:00|MANHATTAN|40.810856|-73.939026|POINT (-73.939026...|EAST 132 STREET  ...|         5 AVENUE|           null|                        0|                       0|         Unsafe Lane Changing|                  Unspecified|Station Wagon/Spo...|               Sedan|
+|07/16/2019|     14:50|MANHATTAN| 40.78202| -73.97173|POINT (-73.97173 ...|TRANSVERSE ROAD N...|CENTRAL PARK WEST|           null|                        0|                       0|         Following Too Clo...|                  Unspecified|                Taxi|Station Wagon/Spo...|
+|07/30/2019|     13:53| BROOKLYN| 40.66989| -73.93381|POINT (-73.93381 ...|SCHENECTADY AVENU...|    LINCOLN PLACE|           null|                        0|                       0|          Passing Too Closely|                  Unspecified|Station Wagon/Spo...|                null|
+|07/12/2019|     11:50|   QUEENS|40.688408|  -73.7305|POINT (-73.7305 4...|119 AVENUE       ...|       233 STREET|           null|                        1|                       0|         Driver Inattentio...|                  Unspecified|Station Wagon/Spo...|               Sedan|
+|07/03/2019|     12:19|    BRONX|40.844913| -73.84944|POINT (-73.84944 ...|HAIGHT AVENUE    ...|    SACKET AVENUE|           null|                        0|                       0|              Other Vehicular|                         null|               Sedan|                null|
++----------+----------+---------+---------+----------+--------------------+--------------------+-----------------+---------------+-------------------------+------------------------+-----------------------------+-----------------------------+--------------------+--------------------+
+only showing top 5 rows
+
+
+
+ Problem 2 (b)
+Top 5 most dangerous street crossings based on no of persons injured or killed :
++--------------------------------+--------------------------------+----------------------+
+|ON STREET NAME                  |CROSS STREET NAME               |TOTAL PERSONS AFFECTED|
++--------------------------------+--------------------------------+----------------------+
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |117.0                 |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |109.0                 |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |93.0                  |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |92.0                  |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |88.0                  |
++--------------------------------+--------------------------------+----------------------+
+
+Top 10 Contributin Factors for each of these top 5 pair of Crossings :
++--------------------------------+--------------------------------+------------------------------+-----+----+
+|ON STREET NAME                  |CROSS STREET NAME               |CONTRIBUTING FACTOR           |count|Rank|
++--------------------------------+--------------------------------+------------------------------+-----+----+
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Driver Inattention/Distraction|11   |1   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Fatigued/Drowsy               |6    |2   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Failure to Yield Right-of-Way |5    |3   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Prescription Medication       |5    |4   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Turning Improperly            |5    |5   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Lost Consciousness            |3    |6   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Backing Unsafely              |3    |7   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Outside Car Distraction       |3    |8   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Other Vehicular               |3    |9   |
+|PENNSYLVANIA AVENUE             |LINDEN BOULEVARD                |Brakes Defective              |2    |10  |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Driver Inattention/Distraction|17   |1   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Fatigued/Drowsy               |12   |2   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Lost Consciousness            |10   |3   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Failure to Yield Right-of-Way |7    |4   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Turning Improperly            |6    |5   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Other Vehicular               |4    |6   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Traffic Control Disregarded   |3    |7   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Driver Inexperience           |3    |8   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Alcohol Involvement           |3    |9   |
+|FLATBUSH AVENUE                 |EMPIRE BOULEVARD                |Prescription Medication       |2    |10  |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Driver Inattention/Distraction|66   |1   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Following Too Closely         |23   |2   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Failure to Yield Right-of-Way |10   |3   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Unsafe Lane Changing          |7    |4   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Reaction to Uninvolved Vehicle|5    |5   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Other Vehicular               |5    |6   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Turning Improperly            |3    |7   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Pavement Slippery             |3    |8   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Passing or Lane Usage Improper|3    |9   |
+|ROCKAWAY BOULEVARD              |BREWER BOULEVARD                |Traffic Control Disregarded   |2    |10  |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Driver Inattention/Distraction|16   |1   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Turning Improperly            |12   |2   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Fatigued/Drowsy               |10   |3   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Failure to Yield Right-of-Way |6    |4   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Driver Inexperience           |5    |5   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Other Vehicular               |5    |6   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Oversized Vehicle             |2    |7   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Outside Car Distraction       |2    |8   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Traffic Control Disregarded   |2    |9   |
+|ATLANTIC AVENUE                 |LOGAN STREET                    |Physical Disability           |2    |10  |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Driver Inattention/Distraction|56   |1   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Failure to Yield Right-of-Way |43   |2   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Following Too Closely         |32   |3   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Passing or Lane Usage Improper|25   |4   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Traffic Control Disregarded   |16   |5   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Turning Improperly            |15   |6   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Unsafe Lane Changing          |14   |7   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Unsafe Speed                  |14   |8   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Other Vehicular               |11   |9   |
+|WEST FORDHAM ROAD               |MAJOR DEEGAN EXPRESSWAY         |Passing Too Closely           |11   |10  |
++--------------------------------+--------------------------------+------------------------------+-----+----+
+
+
+
+
+ Problem 2 (c)
+Based on problem 2 b, We take top CONTRIBUTING FACTORS
+Based on these top 10 CONTRIBUTING FACTORS , we find Count of the Type Of vehicle associated with these factors
+Counting the Occurance of vehicle type of Sports Utility and Passenger :
++-----------------------------+------+
+|VEHICLE TYPE CODE            |count |
++-----------------------------+------+
+|PASSENGER VEHICLE            |193459|
+|SPORT UTILITY / STATION WAGON|90339 |
++-----------------------------+------+
+
+Clearly PASSENGER VEHICLE is more dangerous
+
+
+
+ Problem 2 (D)
+Steps to compute Taxi Trips Collisions :
+      1. Prepare Crash Data : (crash datetime , crash location, crash Contributing Factors)
+      2. Prepare Taxi Data : (Trip start and end datetime , Trip start and end  location)
+      3. Join every Taxi data event with  Every Crash Data event
+      4. Select all such event(taxi trip,crash) if Crash_DateTime is between TaxiTrip Duration
+      5. Select all such event(taxi trip,crash) if Crash_Location is less than 50m from Taxi Trip's Linear Trajectory
+      6. The selected Data are the taxitrips that had met with an collision
+      
+Based on these Steps Some random taxi trips that met with an collision with their Contributing factors are :
+
++-------------------+----------+-----------+-------------------+-----------+------------+-----------------------------+-----------------------------+
+|        PICKUP_TIME|PICKUP_LAT|PICKUP_LONG|       DROPOFF_TIME|DROPOFF_LAT|DROPOFF_LONG|CONTRIBUTING FACTOR VEHICLE 1|CONTRIBUTING FACTOR VEHICLE 2|
++-------------------+----------+-----------+-------------------+-----------+------------+-----------------------------+-----------------------------+
+|2013-01-13 22:00:00|  40.72438| -74.001945|2013-01-13 22:04:00|  40.725861|  -73.994476|           Pavement Defective|                  Unspecified|
+|2013-01-13 21:59:00|  40.76556| -73.965668|2013-01-13 22:04:00|  40.755428|  -73.985649|           Pavement Defective|                  Unspecified|
+|2013-01-13 16:58:00| 40.750179| -73.991852|2013-01-13 17:06:00|  40.759686|  -73.976456|              Fatigued/Drowsy|         Outside Car Distr...|
+|2013-01-13 16:57:00| 40.749821| -73.991882|2013-01-13 17:12:00|  40.779377|  -73.953651|              Fatigued/Drowsy|         Outside Car Distr...|
+|2013-01-13 16:56:00| 40.777454| -73.982552|2013-01-13 17:01:00|  40.783714|  -73.973946|              Fatigued/Drowsy|         Outside Car Distr...|
++-------------------+----------+-----------+-------------------+-----------+------------+-----------------------------+-----------------------------+

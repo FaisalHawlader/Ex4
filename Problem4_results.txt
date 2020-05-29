@@ -1,0 +1,297 @@
+1477789 taxi trips parsed.
+
+
+
+PROBLEM 1 > a > i :
+The number of taxi trips which STARTED in each of the NYC boroughs over the entire period of time :
++-------------+-------+
+|START_BOROUGH|  count|
++-------------+-------+
+|        Bronx|   1016|
+|     Brooklyn|  33281|
+|    Manhattan|1343985|
+|       Queens|  69877|
+|Staten Island|     65|
+|      UNKNOWN|  29565|
++-------------+-------+
+
+
+
+
+PROBLEM 1 > a > ii :
+The number of taxi trips which ENDED in each of the NYC boroughs over the entire period of time :
++-------------+-------+
+|  END_BOROUGH|  count|
++-------------+-------+
+|        Bronx|   6668|
+|     Brooklyn|  71816|
+|    Manhattan|1298185|
+|       Queens|  66944|
+|Staten Island|    301|
+|      UNKNOWN|  33875|
++-------------+-------+
+
+
+
+
+PROBLEM 1 > b > i :
+The number of taxi trips which ENDED in each of the NYC boroughs PER DAY OF WEEK over the entire period of time :
++-------------+---------+------+
+|START_BOROUGH|START_DAY| count|
++-------------+---------+------+
+|        Bronx|      Fri|   125|
+|        Bronx|      Mon|    84|
+|        Bronx|      Sat|   154|
+|        Bronx|      Sun|   125|
+|        Bronx|      Thu|   160|
+|        Bronx|      Tue|   203|
+|        Bronx|      Wed|   165|
+|     Brooklyn|      Fri|  4314|
+|     Brooklyn|      Mon|  2981|
+|     Brooklyn|      Sat|  6619|
+|     Brooklyn|      Sun|  6331|
+|     Brooklyn|      Thu|  4315|
+|     Brooklyn|      Tue|  4830|
+|     Brooklyn|      Wed|  3891|
+|    Manhattan|      Fri|190217|
+|    Manhattan|      Mon|151873|
+|    Manhattan|      Sat|186919|
+|    Manhattan|      Sun|158672|
+|    Manhattan|      Thu|229005|
+|    Manhattan|      Tue|211193|
+|    Manhattan|      Wed|216106|
+|       Queens|      Fri|  8964|
+|       Queens|      Mon|  9886|
+|       Queens|      Sat|  7861|
+|       Queens|      Sun|  9228|
+|       Queens|      Thu| 11531|
+|       Queens|      Tue| 11510|
+|       Queens|      Wed| 10897|
+|Staten Island|      Fri|    14|
+|Staten Island|      Mon|     7|
+|Staten Island|      Sat|     7|
+|Staten Island|      Sun|     3|
+|Staten Island|      Thu|    13|
+|Staten Island|      Tue|    12|
+|Staten Island|      Wed|     9|
+|      UNKNOWN|      Fri|  4218|
+|      UNKNOWN|      Mon|  3372|
+|      UNKNOWN|      Sat|  4007|
+|      UNKNOWN|      Sun|  3701|
+|      UNKNOWN|      Thu|  5012|
+|      UNKNOWN|      Tue|  4536|
+|      UNKNOWN|      Wed|  4719|
++-------------+---------+------+
+
+
+
+
+PROBLEM 1 > b > ii :
+The number of taxi trips which ENDED in each of the NYC boroughs PER DAY OF WEEK over the entire period of time :
++-------------+-------+------+
+|  END_BOROUGH|END_DAY| count|
++-------------+-------+------+
+|        Bronx|    Fri|   868|
+|        Bronx|    Mon|   685|
+|        Bronx|    Sat|   992|
+|        Bronx|    Sun|   984|
+|        Bronx|    Thu|  1027|
+|        Bronx|    Tue|  1204|
+|        Bronx|    Wed|   908|
+|     Brooklyn|    Fri|  9481|
+|     Brooklyn|    Mon|  7263|
+|     Brooklyn|    Sat| 11781|
+|     Brooklyn|    Sun| 11564|
+|     Brooklyn|    Thu| 11062|
+|     Brooklyn|    Tue| 10721|
+|     Brooklyn|    Wed|  9944|
+|    Manhattan|    Fri|183461|
+|    Manhattan|    Mon|148520|
+|    Manhattan|    Sat|179332|
+|    Manhattan|    Sun|153073|
+|    Manhattan|    Thu|220635|
+|    Manhattan|    Tue|204152|
+|    Manhattan|    Wed|209012|
+|       Queens|    Fri|  8938|
+|       Queens|    Mon|  7835|
+|       Queens|    Sat|  8496|
+|       Queens|    Sun|  9898|
+|       Queens|    Thu| 11057|
+|       Queens|    Tue| 10423|
+|       Queens|    Wed| 10297|
+|Staten Island|    Fri|    44|
+|Staten Island|    Mon|    27|
+|Staten Island|    Sat|    41|
+|Staten Island|    Sun|    39|
+|Staten Island|    Thu|    50|
+|Staten Island|    Tue|    38|
+|Staten Island|    Wed|    62|
+|      UNKNOWN|    Fri|  4772|
+|      UNKNOWN|    Mon|  3827|
+|      UNKNOWN|    Sat|  4527|
+|      UNKNOWN|    Sun|  4326|
+|      UNKNOWN|    Thu|  5745|
+|      UNKNOWN|    Tue|  5289|
+|      UNKNOWN|    Wed|  5389|
++-------------+-------+------+
+
+
+
+
+PROBLEM 1 > c  :
+Average duration between two subsequent trips conducted by the same taxi driver per borough and per hour-of-the-day :
++-------------+---------------+-----------------+
+|      BOROUGH|Hour Of the Day|AVG_WAIT_TIME_Hrs|
++-------------+---------------+-----------------+
+|        Bronx|              0|              1.1|
+|        Bronx|              1|             1.05|
+|        Bronx|              2|              1.2|
+|        Bronx|              3|              0.9|
+|        Bronx|              4|              0.9|
+|        Bronx|              5|              0.7|
+|        Bronx|              6|             0.75|
+|        Bronx|              7|              0.8|
+|        Bronx|              8|              0.9|
+|        Bronx|              9|             0.95|
+|        Bronx|             10|              1.3|
+|        Bronx|             11|             1.25|
+|        Bronx|             12|              1.3|
+|        Bronx|             13|             1.05|
+|        Bronx|             14|              1.2|
+|        Bronx|             15|             0.95|
+|        Bronx|             16|              0.8|
+|        Bronx|             17|              0.7|
+|        Bronx|             18|             0.65|
+|        Bronx|             19|             0.75|
+|        Bronx|             20|              0.9|
+|        Bronx|             21|             0.95|
+|        Bronx|             22|              1.0|
+|        Bronx|             23|             0.95|
+|     Brooklyn|              0|             0.95|
+|     Brooklyn|              1|             0.95|
+|     Brooklyn|              2|              0.9|
+|     Brooklyn|              3|              1.0|
+|     Brooklyn|              4|              1.1|
+|     Brooklyn|              5|              0.8|
+|     Brooklyn|              6|              1.0|
+|     Brooklyn|              7|              0.9|
+|     Brooklyn|              8|             0.95|
+|     Brooklyn|              9|              1.1|
+|     Brooklyn|             10|             1.15|
+|     Brooklyn|             11|             1.15|
+|     Brooklyn|             12|              1.1|
+|     Brooklyn|             13|              1.1|
+|     Brooklyn|             14|              1.0|
+|     Brooklyn|             15|             1.05|
+|     Brooklyn|             16|             0.95|
+|     Brooklyn|             17|              0.7|
+|     Brooklyn|             18|             0.55|
+|     Brooklyn|             19|             0.65|
+|     Brooklyn|             20|              0.8|
+|     Brooklyn|             21|             0.85|
+|     Brooklyn|             22|              0.9|
+|     Brooklyn|             23|             0.95|
+|    Manhattan|              0|             1.05|
+|    Manhattan|              1|              1.1|
+|    Manhattan|              2|              1.1|
+|    Manhattan|              3|             1.15|
+|    Manhattan|              4|              1.1|
+|    Manhattan|              5|              0.8|
+|    Manhattan|              6|             0.35|
+|    Manhattan|              7|              0.3|
+|    Manhattan|              8|             0.45|
+|    Manhattan|              9|             0.65|
+|    Manhattan|             10|             0.85|
+|    Manhattan|             11|              1.0|
+|    Manhattan|             12|              1.0|
+|    Manhattan|             13|              1.0|
+|    Manhattan|             14|              1.0|
+|    Manhattan|             15|             0.95|
+|    Manhattan|             16|              0.8|
+|    Manhattan|             17|              0.5|
+|    Manhattan|             18|              0.5|
+|    Manhattan|             19|              0.6|
+|    Manhattan|             20|             0.85|
+|    Manhattan|             21|              1.0|
+|    Manhattan|             22|             1.05|
+|    Manhattan|             23|             1.05|
+|       Queens|              0|             1.05|
+|       Queens|              1|              1.0|
+|       Queens|              2|              1.0|
+|       Queens|              3|             1.05|
+|       Queens|              4|              1.0|
+|       Queens|              5|             0.65|
+|       Queens|              6|              0.6|
+|       Queens|              7|              0.9|
+|       Queens|              8|             1.15|
+|       Queens|              9|              1.2|
+|       Queens|             10|              1.3|
+|       Queens|             11|             1.35|
+|       Queens|             12|              1.3|
+|       Queens|             13|              1.3|
+|       Queens|             14|              1.2|
+|       Queens|             15|              1.2|
+|       Queens|             16|             1.05|
+|       Queens|             17|             1.05|
+|       Queens|             18|             0.95|
+|       Queens|             19|              1.1|
+|       Queens|             20|             1.15|
+|       Queens|             21|             1.15|
+|       Queens|             22|             1.15|
+|       Queens|             23|             1.05|
+|Staten Island|              0|              1.2|
+|Staten Island|              1|             1.15|
+|Staten Island|              2|             1.25|
+|Staten Island|              3|              0.8|
+|Staten Island|              7|              0.0|
+|Staten Island|              8|             0.75|
+|Staten Island|              9|              1.0|
+|Staten Island|             10|              1.0|
+|Staten Island|             11|              1.0|
+|Staten Island|             12|              0.0|
+|Staten Island|             13|              0.6|
+|Staten Island|             14|              0.0|
+|Staten Island|             15|              1.0|
+|Staten Island|             16|              1.4|
+|Staten Island|             17|              1.0|
+|Staten Island|             18|              0.8|
+|Staten Island|             19|              1.0|
+|Staten Island|             20|              1.5|
+|Staten Island|             21|             0.75|
+|Staten Island|             22|             0.35|
+|Staten Island|             23|              1.4|
++-------------+---------------+-----------------+
+
+
+
+
+PROBLEM 1 > d  :
+The 95% quantile mark for the trip duration is :  26.0 mins
+Any taxi trip longer than 26.0 mins can be a potential outlier
+Some random 5 potential outliers in the given dataset :
++-----------------------------------------------------------------------------------------------------------------------------------+----------------+
+|TRIP                                                                                                                               |Duration_minutes|
++-----------------------------------------------------------------------------------------------------------------------------------+----------------+
+|TaxiTrip(2013-01-10T17:19:42.000+05:30,2013-01-10T17:51:18.000+05:30,{"x":-73.963608,"y":40.774113},{"x":-73.944038,"y":40.717518})|31              |
+|TaxiTrip(2013-01-13T04:15:00.000+05:30,2013-01-13T04:43:00.000+05:30,{"x":-74.007919,"y":40.723305},{"x":-73.870979,"y":40.855957})|28              |
+|TaxiTrip(2013-01-13T09:54:00.000+05:30,2013-01-13T10:25:00.000+05:30,{"x":-73.931435,"y":40.703655},{"x":-74.005653,"y":40.709267})|31              |
+|TaxiTrip(2013-01-13T10:05:00.000+05:30,2013-01-13T10:33:00.000+05:30,{"x":-73.992088,"y":40.759056},{"x":-73.791519,"y":40.644604})|28              |
+|TaxiTrip(2013-01-13T10:05:00.000+05:30,2013-01-13T10:34:00.000+05:30,{"x":-73.804657,"y":40.650089},{"x":-73.966782,"y":40.799061})|29              |
++-----------------------------------------------------------------------------------------------------------------------------------+----------------+
+
+
+
+
+PROBLEM 1 > e  :
+The 95% quantile mark /ratio for the trips  DURATION to DISTANCE ratio is :  1191.7257741262051
+Any taxi trip having Duration : Distance larger than 1191.7257741262051  can be a potential outlier
+Some random 5 potential outliers with respect to Duration : Distance ratio in the given dataset :
++-----------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+|TRIP                                                                                                                               |Duration_to_Distance_ratio|
++-----------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+|TaxiTrip(2013-01-13T04:32:00.000+05:30,2013-01-13T04:48:00.000+05:30,{"x":-73.945297,"y":40.783367},{"x":-73.945297,"y":40.783367})|Infinity                  |
+|TaxiTrip(2013-01-13T11:06:00.000+05:30,2013-01-13T11:07:00.000+05:30,{"x":-73.99176,"y":40.726768},{"x":-73.99176,"y":40.726768})  |Infinity                  |
+|TaxiTrip(2013-01-13T11:04:00.000+05:30,2013-01-13T11:10:00.000+05:30,{"x":-73.963905,"y":40.765224},{"x":-73.968475,"y":40.767056})|1218.65                   |
+|TaxiTrip(2013-01-13T04:33:00.000+05:30,2013-01-13T04:42:00.000+05:30,{"x":-73.986305,"y":40.730335},{"x":-73.986305,"y":40.730335})|Infinity                  |
+|TaxiTrip(2013-01-13T10:17:00.000+05:30,2013-01-13T10:24:00.000+05:30,{"x":-73.978889,"y":40.783344},{"x":-73.978889,"y":40.783344})|Infinity                  |
++-----------------------------------------------------------------------------------------------------------------------------------+--------------------------+

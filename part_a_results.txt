@@ -1,0 +1,68 @@
+COMPUTING HISTORICAL 5% Var / CVar using sliding for 10 DAY (2 week) time horizon
+
+
+5%-QUANTILE (VaR) for AAPL :     	-0.07027768255056567
+AVG OVER 5%-QUANTILE (CVar) for AAPL : -0.09106557454280276
+
+
+5%-QUANTILE (VaR) for AMZN :     	-0.0704554951943168
+AVG OVER 5%-QUANTILE (CVar) for AMZN : -0.09824628044865856
+
+
+5%-QUANTILE (VaR) for GOOGL :     	-0.0708617340050709
+AVG OVER 5%-QUANTILE (CVar) for GOOGL : -0.09055077938738043
+
+
+5%-QUANTILE (VaR) for MSFT :     	-0.0590943975441289
+AVG OVER 5%-QUANTILE (CVar) for MSFT : -0.08781328877765163
+
+----------------------------------------------------------
+
+
+COMPUTING MONTECARLO 5% Var / CVar 10 DAY (2 week) time horizon :
+
+5%-QUANTILE (VaR) for AAPL : -0.02818595090126339
+AVG OVER 5%-QUANTILE (CVar) for AAPL : -0.037626278697335376
+
+
+5%-QUANTILE (VaR) for AMZN : -0.023118768707018827
+AVG OVER 5%-QUANTILE (CVar) for AMZN : -0.032621000315287633
+
+
+5%-QUANTILE (VaR) for GOOGL : -0.029356467057213464
+AVG OVER 5%-QUANTILE (CVar) for GOOGL : -0.03882625613154996
+
+
+5%-QUANTILE (VaR) for MSFT : -0.02832423408351102
+AVG OVER 5%-QUANTILE (CVar) for MSFT : -0.03689805053914562
+
+----------------------------------------------------------
+
+
+(a) (i) The safest investment according to 
+	- HISTORICAL method : MSFT
+
+	- MONTECARLO Simulation : AMZN
+
+
+----------------------------------------------------------
+
+
+(a)(ii)
+the advantage of simulating the VaR and CVar values using MONTECARLO : 
+
+1. Tries to weaken the assumptions in the Historical methods by simulating the portfolio under random conditions
+
+2. Defines a relationship between market conditions and each instrument’s returns. 
+	This relationship takes the form of a model fitted to historical data.
+
+3. Defines distributions for the market conditions that are straightforward to sample from. 
+	These distributions are fitted to historical data.
+
+4. Estimate its density function (PDF) by repeatedly sampling simpler random variables that it depends i.e. 
+	Poses trials consisting of random market conditions.
+
+
+
+
+

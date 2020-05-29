@@ -1,0 +1,36 @@
+Running Montecarlo Simulation for 1,5,10,20 days time window :
+
+(i) 1 day window : 
+
+COMPUTED VaR  at 5% QUANTILE for 1 day window: -0.008174627238929052
+COMPUTED CVaR at 5% QUANTILE for 1 day window: -0.010972994159422765
+
+Find plot in file : trials_plot_1_days_window.png
+
+
+(ii) 5 day window : 
+
+COMPUTED VaR  at 5% QUANTILE for 5 day window: -0.018698129687721787
+COMPUTED CVaR at 5% QUANTILE for 5 day window: -0.024017099469356963
+
+Find plot in file : trials_plot_5_days_window.png
+
+
+(iii) 10 day window :
+
+COMPUTED VaR  at 5% QUANTILE for 10 day window: -0.02634991334031038
+COMPUTED CVaR at 5% QUANTILE for 10 day window: -0.035494238001400065
+
+Find plot in file : trials_plot_10_days_window.png
+
+
+(iv) 20 day window : 
+
+COMPUTED VaR  at 5% QUANTILE for 20 day window: -0.03368877858998324
+COMPUTED CVaR at 5% QUANTILE for 20 day window: -0.043917325170403955
+
+Find plot in file : trials_plot_20_days_window.png
+
+
+
+
