@@ -1,0 +1,6 @@
+
+RUNNING Simulation for LINEAR MODEL WITHOUT Multivariate Normal Distribution 
+i.e. Considering factors are independent over each other.
+
+COMPUTED VaR  at 5% QUANTILE: -0.0016307143396941377
+COMPUTED CVaR at 5% QUANTILE: -0.0024302413426158636
